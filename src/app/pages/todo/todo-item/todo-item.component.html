@@ -1,0 +1,12 @@
+<div class="list__container" *ngFor="let i of lista">
+   <div>
+        <ul>
+            <li class="list__itens" [ngStyle]="{textDecoration: i.done ? 'line-through' : 'none' }">{{i.id}}.{{i.title}}</li>
+        </ul>
+    </div>
+
+    <div> 
+        <button class="btn btn-success me-1"(click)="markAsDone(i.id)">Ok</button>
+        <button class="btn btn-danger" (click)="removeToDo(i.id)">Nok</button>
+    </div>
+</div>

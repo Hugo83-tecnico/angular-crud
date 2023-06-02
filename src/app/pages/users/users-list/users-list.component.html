@@ -1,0 +1,35 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+        <h1 class="card-title text-center">Lista de Usuários</h1>
+        <button class="btn btn-success mb-4 float-end" [routerLink] = "['/editUsers',0]">
+            Cadastrar Novo
+        </button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let i of listaCadstro">
+                    <td>{{i.id}}</td>
+                    <td>{{i.nome}}</td>
+                    <td>{{i.sobrenome}}</td>
+                    <td>{{i.profissao}}</td>
+                    <td>
+                        <button class="btn btn-primary" [routerLink] =" ['/editUsers',i.id] ">Editar</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteUser(i.id)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

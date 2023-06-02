@@ -1,0 +1,16 @@
+<section class="col-3 m-5">
+    <div class="card">
+        <div class="card__header m-2">
+            <h4 class="title ">Lista de Tarefas</h4>
+        </div>
+        <div class="card__description m-2">
+            <span>Terefa:</span>
+            <input type="text" class="form-control" #todo placeholder="Digite aqui" (keyup.enter)="addTodo(todo.value); todo.value = ''">
+        </div>
+        <div class="m-1">   
+           <app-todo-item [lista]="toDo"></app-todo-item>
+        </div>
+      
+    </div>
+   
+</section>
